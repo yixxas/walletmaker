@@ -27,8 +27,6 @@ let create_wallet = async function(){
     };
 
     let file_name: string = await user_input("Enter wallet file name: ") as string;
-    //let password1: string = await user_input("Enter password: ") as string;
-    //let password2: string = await user_input("Confirm password: ") as string;
     let password1: string = readlineSync.question("Enter password: ", {hideEchoBack: true});
     let password2: string = readlineSync.question("Confirm password: ", {hideEchoBack: true});
 
