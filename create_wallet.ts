@@ -25,6 +25,7 @@ let create_wallet = async function(){
         "scrypt": {"N": 2**14, "r": 224, "p": 4}
     };
 
+    let file_name: string = await user_input("Enter wallet file name: ") as string;
     let password1: string = await user_input("Enter password: ") as string;
     let password2: string = await user_input("Confirm password: ") as string;
 
@@ -32,7 +33,7 @@ let create_wallet = async function(){
 
     let encryptPromise = await wallet.encrypt(password1,options,callback);
 
-    fs.writeFile("wallet.json", encryptPromise, (error) => {
+    fs.writeFile(file_name + ".json", encryptPromise, (error) => {
         if(error){
             return console.log(error);
         }
