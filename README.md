@@ -1,4 +1,4 @@
-## JSON wallet maker
+## Ethereum JSON wallet maker
 
 Set scrypt N, r, p according to your desired wallet security
 
